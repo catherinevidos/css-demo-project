@@ -6,7 +6,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"), //
   output: {
     path: path.join(__dirname, outputDir),
-    filename: "css_demo_vidos.js",
+    filename: "[name].js",
     publicPath: "/dist/"
   },
   resolve: {
@@ -38,6 +38,16 @@ module.exports = {
           "css-loader",
           "postcss-loader"
         ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+            loader: 'url-loader',
+            options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+         }]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
