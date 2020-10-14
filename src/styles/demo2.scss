@@ -45,3 +45,9 @@
     background-color: green;
   }
 }
+
+#letter1 {
+  height: 50px;
+  width: 20px;
+  @include animation('background color 5s');
+}
