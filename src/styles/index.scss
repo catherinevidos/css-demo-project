@@ -1,3 +1,6 @@
+@import './demo1.scss', './demo2.scss', './reset.scss';
+
+
 @font-face {
   font-family: 'slab';
   src: url('./fonts/slab.woff2') format('woff2');
@@ -13,6 +16,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  position: absolute;
 }
 
 #intro-text {
@@ -24,10 +29,12 @@ html {
   border: 1px solid black;
   padding: 5px;
   opacity: 0;
+  overflow: hidden;
 }
 
 #body-wrapper {
   visibility: hidden;
+  overflow: hidden;
 }
 
 #body-wrapper-show {

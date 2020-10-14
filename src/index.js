@@ -1,14 +1,11 @@
 import './styles/index.scss';
-import './styles/reset.scss';
-import './styles/demo1.scss';
-import './styles/demo2.scss';
 
 
 window.addEventListener("DOMContentLoaded", () => {
   window.onload = fadeIn; 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+  // window.onbeforeunload = function () {
+  //   // window.scrollTo(0, 0);
+  // }
   console.log("hello");
   
   function fadeIn() {
@@ -28,8 +25,34 @@ window.addEventListener("DOMContentLoaded", () => {
         fadeParent.remove();
         content.id = 'body-wrapper-show'
       }
-    }, 200);
+    }, 300);
   }
 
-  
+  let display = document.getElementById('highlight');
+  let typing = document.getElementById('hello-world');
+
+  display.addEventListener('mouseover', function() {
+    display.style.animation = 'highlight 1.5s';
+  })
+
+  display.addEventListener('mouseout', function() {
+    display.style.animation = 'none';
+  })
+
+  typing.addEventListener('mouseover', function() {
+    typing.style.animation = 'type 5s steps(18) 1s infinite normal both';
+    typing.textContent = 'click to stop';
+  })
+
+  typing.addEventListener('click', function() {
+    typing.style.animation = 'none';
+    typing.textContent = 'hover to start';
+  })
+
+
+
+  // document.getElementById('highlight-hover').addEventListener('mouseout', function(event) {
+  //   event.target.id = 'highlight';
+  // })
+
 });
