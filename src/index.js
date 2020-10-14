@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
         fadeParent.remove();
         content.id = 'body-wrapper-show'
       }
-    }, 300);
+    }, 200);
   }
 
   
