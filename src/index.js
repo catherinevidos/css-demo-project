@@ -22,14 +22,16 @@ window.addEventListener("DOMContentLoaded", () => {
       } else {
         clearInterval(interval);
         fade.remove();
-        fadeParent.remove();
-        content.id = 'body-wrapper-show'
+        fadeParent.remove()
+        content.id = 'body-wrapper-show';
+        // content.style.
       }
     }, 300);
   }
 
   let display = document.getElementById('highlight');
   let typing = document.getElementById('hello-world');
+  let image = document.getElementsByClassName('container');
 
   display.addEventListener('mouseover', function() {
     display.style.animation = 'highlight 1.5s';
@@ -49,7 +51,12 @@ window.addEventListener("DOMContentLoaded", () => {
     typing.textContent = 'hover to start';
   })
 
-
+  image[0].addEventListener('click', function() {
+    let body = document.getElementsByTagName('BODY')[0];
+    image[0].style.height = '100%';
+    // body.style.background = 'background: rgba(0, 0, 0, 0.6)';
+    body.style.backgroundColor = 'blue';
+  })
 
   // document.getElementById('highlight-hover').addEventListener('mouseout', function(event) {
   //   event.target.id = 'highlight';

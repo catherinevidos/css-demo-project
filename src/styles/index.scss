@@ -1,4 +1,4 @@
-@import './demo1.scss', './demo2.scss', './reset.scss';
+@import './demo1.scss', './demo2.scss', './demo3.scss', './reset.scss';
 
 
 @font-face {
@@ -17,7 +17,7 @@ html {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
 }
 
 #intro-text {
@@ -46,6 +46,7 @@ html {
   max-width: calc(131.2rem);
   padding: 0px 6.4rem;
   scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 #navbar {
