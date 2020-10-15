@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
   display.addEventListener('mouseout', function() {
-    display.style.animation = 'none';
+    display.style.animation = 'highlight-away .6s 1 linear';
   })
 
   typing.addEventListener('mouseover', function() {

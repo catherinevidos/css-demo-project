@@ -160,6 +160,22 @@
 }
 
 
+@include keyframes('highlight-away') {
+  0% {
+    width: 115px;
+    height: 32px;
+    background-color: skyblue;
+  }
+
+  
+  100% {
+    width: 115px;
+    height: 4px;
+    background-color: skyblue;
+  }
+}
+
+
 #highlight {
   width: 115px;
   height: 4px;
