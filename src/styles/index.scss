@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'barlowcondensed-thin';
-  src: url('./fonts/BarlowCondensed-Thin.ttf') format('ttf');
+  src: url('./fonts/BarlowCondensed-Thin.ttf') format('truetype');
   font-family: 'slab';
   src: url('./fonts/slab.woff2') format('woff2');
 }
@@ -52,7 +52,8 @@ html {
 }
 
 #navbar {
-  font-family: barlowcondensed-thin;
+  font-family: 'Barlow Condensed Thin',
+  sans-serif;
   color: black;
   font-size: 18pt;
   height: 100px;
@@ -89,6 +90,7 @@ html {
   height: auto;
   width: 100%;
   margin-top: 100px;
-  font-family: barlowcondensed-thin;
+  font-family: 'Barlow Condensed Thin',
+  sans-serif;
 }
 
