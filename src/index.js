@@ -31,7 +31,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let display = document.getElementById('highlight');
   let typing = document.getElementById('hello-world');
-  let image = document.getElementsByClassName('container');
+
+  let image1 = document.getElementById('container1');
+  let image2 = document.getElementById('container2');
+  let image3 = document.getElementById('container3');
+  let header = document.getElementById('button-demos-tooltip');
+  let span1 = document.getElementById('image1-span');
+  let span2 = document.getElementById('image2-span');
+  let span3 = document.getElementById('image3-span');
+  let x = document.getElementById('x-button');
+ 
 
   display.addEventListener('mouseover', function() {
     display.style.animation = 'highlight 1.5s';
@@ -50,13 +59,95 @@ window.addEventListener("DOMContentLoaded", () => {
     typing.style.animation = 'none';
     typing.textContent = 'hover to start';
   })
+  // function resetWidths() {
+  //   if (image1.style.width === '50%') {
+  //     image2.style.width = '30%';
+  //     image3.style.width = '30%';
+  //   } else if (image2.style.width === '50%') {
+  //     image1.style.width = '30%';
+  //     image3.style.width = '30%';
+  //   } else if (image3.style.width === '50%') {
+  //     image2.style.width = '30%';
+  //     image1.style.width = '30%';
+  //   } 
+  // }
 
-  image[0].addEventListener('click', function() {
-    let body = document.getElementsByTagName('BODY')[0];
-    image[0].style.height = '100%';
-    // body.style.background = 'background: rgba(0, 0, 0, 0.6)';
-    body.style.backgroundColor = 'blue';
+  document.body.parentNode.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (image1.contains(event.target)) {
+      image1.style.animation = 'resize 1s linear forwards';
+      image2.style.animation = 'resizeBack 1s linear forwards';
+      image3.style.animation = 'resizeBack 1s linear forwards';
+      header.style.opacity = 0;
+      span1.style.opacity = 0;
+      span2.style.opacity = 0;
+      span3.style.opacity = 0;
+
+    } else if (image2.contains(event.target)) {
+      image2.style.animation = 'resize 1s linear forwards';
+      image1.style.animation = 'resizeBack 1s linear forwards';
+      image3.style.animation = 'resizeBack 1s linear forwards';
+      header.style.opacity = 0;
+      span1.style.opacity = 0;
+      span2.style.opacity = 0;
+      span3.style.opacity = 0;
+    } else if (image3.contains(event.target)){
+      image3.style.animation = 'resize 1s linear forwards';
+      image2.style.animation = 'resizeBack 1s linear forwards';
+      image1.style.animation = 'resizeBack 1s linear forwards';
+      header.style.opacity = 0;
+      span1.style.opacity = 0;
+      span2.style.opacity = 0;
+      span3.style.opacity = 0;
+    } else {
+      image1.style.animation = 'resizeBack 1s linear forwards';
+      image2.style.animation = 'resizeBack 1s linear forwards';
+      image3.style.animation = 'resizeBack 1s linear forwards';
+      header.style.opacity = 1;
+      span1.style.opacity = '';
+      span2.style.opacity = '';
+      span3.style.opacity = '';
+    }
   })
+
+  // span1.addEventListener('mouseover', function() {
+  //   span1.style.height = '50%';
+  // })
+
+  // span1.addEventListener('mouseout', function() {
+  //   span1.style.height = '';
+  // })
+
+  // image1.addEventListener('click', function() {
+  //     image1.style.animation = 'resize 1s linear forwards';
+  //     image2.style.animation = 'resizeBack 1s linear forwards';
+  //     image3.style.animation = 'resizeBack 1s linear forwards';
+
+  //     // window.scrollTo(0, document.body.scrollHeight)
+  //     x.id = 'x-button-show';
+  // });
+
+  // image2.addEventListener('click', function() {
+  //     image2.style.animation = 'resize 1s linear forwards';
+  //     image1.style.animation = 'resizeBack 1s linear forwards';
+  //     image3.style.animation = 'resizeBack 1s linear forwards';
+  //     x.id = 'x-button-show';
+  // })
+
+  // image3.addEventListener('click', function() {
+  //     image3.style.animation = 'resize 1s linear forwards';
+  //     image1.style.animation = 'resizeBack 1s linear forwards';
+  //     image2.style.animation = 'resizeBack 1s linear forwards';
+  //     x.id = 'x-button-show';
+  // })
+
+  // x.addEventListener('click', function() {
+  //   image1.style.animation = 'resizeBack 1s linear forwards';
+  //   image2.style.animation = 'resizeBack 1s linear forwards';
+  //   image3.style.animation = 'resizeBack 1s linear forwards';
+  //   x.id = 'x-button';
+  // })
+  
 
   // document.getElementById('highlight-hover').addEventListener('mouseout', function(event) {
   //   event.target.id = 'highlight';
