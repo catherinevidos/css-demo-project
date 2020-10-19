@@ -90,8 +90,11 @@
   margin-left: 5px;
   margin-right: 5px;
   position: relative;
+  transition: all 1s;
   &:hover {
     cursor: zoom-in;
+    transition: ease-in-out 1s;
+    filter: grayscale(100%);
   }
 }
 

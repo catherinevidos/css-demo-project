@@ -118,9 +118,20 @@ window.addEventListener("DOMContentLoaded", () => {
     span1.textContent = 'hover or click me';
   })
 
-  image2.addEventListener('mouseover', function() {
-    span2.style.opacity = 0;
-  })
+  // image2.addEventListener('mouseover', function() {
+  //   span2.style.opacity = 0;
+  // })
+
+  // image2.addEventListener('mouseout', function() {
+  //   span2.style.opacity = '';
+  // })
+
+  // image3.addEventListener('mouseover', function() {
+  //    = 0;
+  // })
+
+
+
 
   // span1.addEventListener('mouseover', function() {
   //   span1.style.height = '50%';
