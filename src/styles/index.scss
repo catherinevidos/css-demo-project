@@ -1,11 +1,16 @@
 @import './demo1.scss', './demo2.scss', './demo3.scss', './demo4.scss', './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
 
 
 @font-face {
   font-family: 'barlowcondensed-thin';
   src: url('./fonts/BarlowCondensed-Thin.ttf') format('truetype');
+  src: url('./fonts/barlowcondensed-thin-webfont.woff') format('woff');
+  src: url('./fonts/barlowcondensed-thin-webfont.woff2') format('woff2');
+
   font-family: 'slab';
   src: url('./fonts/slab.woff2') format('woff2');
+  src: url('./fonts/slab.woff2') format('woff');
 }
 
 html {
@@ -52,7 +57,8 @@ html {
 }
 
 #navbar {
-  font-family: barlowcondensed-thin;
+  font-family: 'Barlow Condensed',
+  sans-serif;
   color: black;
   font-size: 18pt;
   height: 100px;
@@ -89,6 +95,7 @@ html {
   height: auto;
   width: 100%;
   margin-top: 100px;
-  font-family: barlowcondensed-thin;
+  font-family: 'Barlow Condensed',
+  sans-serif;
 }
 

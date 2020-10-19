@@ -55,6 +55,20 @@
   }
 }
 
+#container1:hover #image1-span {
+  height: 50%;
+}
+
+// #container2:hover #image2-span {
+//   height: 50%;
+// }
+
+// #container3:hover #image3-span {
+//   height: 50%;
+// }
+
+
+
 #container2 {
   height: 50%;
   width: 30%;
@@ -106,9 +120,9 @@
   opacity: .70;
   background-color: white;
   transition: all ease .3s;
-  &:hover {
-    height: 50%;
-  }
+  // &:hover {
+  //   height: 50%;
+  // }
 }
 
 #image2-span {
@@ -120,6 +134,7 @@
   width: 100%;
   opacity: .70;
   background-color: white;
+  transition: all ease .3s;
 }
 
 #image3-span {
@@ -131,6 +146,7 @@
   width: 100%;
   opacity: .70;
   background-color: white;
+  transition: all ease .3s;
 }
 
 // #image3-container {

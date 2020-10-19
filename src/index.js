@@ -110,6 +110,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  image1.addEventListener('mouseover', function() {
+    span1.textContent = 'serene ferry ride';
+  })
+
+  image1.addEventListener('mouseout', function() {
+    span1.textContent = 'hover or click me';
+  })
+
+  image2.addEventListener('mouseover', function() {
+    span2.style.opacity = 0;
+  })
+
   // span1.addEventListener('mouseover', function() {
   //   span1.style.height = '50%';
   // })

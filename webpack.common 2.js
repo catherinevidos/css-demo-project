@@ -26,7 +26,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [{
+        use: [
+            {
             loader: MiniCssExtractPlugin.loader,
             options: {
               // you can specify a publicPath here
@@ -64,7 +65,8 @@ module.exports = {
       },
       {
         test: /\.scss/,
-        use: [{
+        use: [
+          {
             loader: MiniCssExtractPlugin.loader,
             options: {
               // you can specify a publicPath here
