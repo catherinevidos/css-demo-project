@@ -1,11 +1,29 @@
 .button-demos {
-  font-family: 'Cinzel',
-  serif;
-  font-size: 22px;
-  letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 40px;
+  font-size: 24pt;
+  letter-spacing: -2px;
+  // text-align: center;
+  margin-bottom: 50px;
   margin-top: 20px;
+  font-weight: bold;
+}
+
+.button-demos span {
+  border-bottom: 2px solid black;
+}
+
+.button-demos-about {
+  // font-family: 'Cinzel',
+  //   serif;
+  font-size: 24pt;
+  // text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  letter-spacing: -2px;
+  font-weight: bold;
+}
+
+.button-demos-about span {
+  border-bottom: 2px solid black;
 }
 
 .demo {
@@ -14,10 +32,23 @@
   position: relative;
   height: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+.demo-text {
+  color: black;
+  font-size: 14pt;
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 20pt;
 }
 
 
@@ -114,4 +145,9 @@
   &:hover {
     top: -10px;
   }
+}
+
+#about-site {
+  width: calc(100% - 200px);
+  margin: auto;
 }

@@ -3,10 +3,6 @@ import './styles/index.scss';
 
 window.addEventListener("DOMContentLoaded", () => {
   window.onload = fadeIn; 
-  // window.onbeforeunload = function () {
-  //   // window.scrollTo(0, 0);
-  // }
-  console.log("hello");
   
   function fadeIn() {
     let fade = document.getElementById("intro-text");
@@ -24,7 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
         fade.remove();
         fadeParent.remove()
         content.id = 'body-wrapper-show';
-        // content.style.
       }
     }, 300);
   }
@@ -59,18 +54,6 @@ window.addEventListener("DOMContentLoaded", () => {
     typing.style.animation = 'none';
     typing.textContent = 'hover to start';
   })
-  // function resetWidths() {
-  //   if (image1.style.width === '50%') {
-  //     image2.style.width = '30%';
-  //     image3.style.width = '30%';
-  //   } else if (image2.style.width === '50%') {
-  //     image1.style.width = '30%';
-  //     image3.style.width = '30%';
-  //   } else if (image3.style.width === '50%') {
-  //     image2.style.width = '30%';
-  //     image1.style.width = '30%';
-  //   } 
-  // }
 
   document.body.parentNode.addEventListener('click', function(event) {
     event.preventDefault();
@@ -78,7 +61,6 @@ window.addEventListener("DOMContentLoaded", () => {
       image1.style.animation = 'resize 1s linear forwards';
       image2.style.animation = 'resizeBack 1s linear forwards';
       image3.style.animation = 'resizeBack 1s linear forwards';
-      header.style.opacity = 0;
       span1.style.opacity = 0;
       span2.style.opacity = 0;
       span3.style.opacity = 0;
@@ -87,7 +69,6 @@ window.addEventListener("DOMContentLoaded", () => {
       image2.style.animation = 'resize 1s linear forwards';
       image1.style.animation = 'resizeBack 1s linear forwards';
       image3.style.animation = 'resizeBack 1s linear forwards';
-      header.style.opacity = 0;
       span1.style.opacity = 0;
       span2.style.opacity = 0;
       span3.style.opacity = 0;
@@ -95,7 +76,6 @@ window.addEventListener("DOMContentLoaded", () => {
       image3.style.animation = 'resize 1s linear forwards';
       image2.style.animation = 'resizeBack 1s linear forwards';
       image1.style.animation = 'resizeBack 1s linear forwards';
-      header.style.opacity = 0;
       span1.style.opacity = 0;
       span2.style.opacity = 0;
       span3.style.opacity = 0;
@@ -103,7 +83,6 @@ window.addEventListener("DOMContentLoaded", () => {
       image1.style.animation = 'resizeBack 1s linear forwards';
       image2.style.animation = 'resizeBack 1s linear forwards';
       image3.style.animation = 'resizeBack 1s linear forwards';
-      header.style.opacity = 1;
       span1.style.opacity = '';
       span2.style.opacity = '';
       span3.style.opacity = '';
@@ -111,69 +90,31 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
   image1.addEventListener('mouseover', function() {
-    span1.textContent = 'serene ferry ride';
+    span1.style.transition = "all 1s";
+    span1.textContent = 'Boat ride in Lago di Braies, Braies, Italy';
   })
 
   image1.addEventListener('mouseout', function() {
-    span1.textContent = 'hover or click me';
+    span1.textContent = 'Hover Over or Click on Me';
   })
 
-  // image2.addEventListener('mouseover', function() {
-  //   span2.style.opacity = 0;
-  // })
+  image2.addEventListener('mouseover', function() {
+    span2.style.transition = "all 1s";
+    span2.textContent = 'Subway in Fridhemsplan, Stockholm, Sweden';
+  })
 
-  // image2.addEventListener('mouseout', function() {
-  //   span2.style.opacity = '';
-  // })
+  image2.addEventListener('mouseout', function() {
+    span2.textContent = 'Hover Over or Click on Me';
+  })
 
-  // image3.addEventListener('mouseover', function() {
-  //    = 0;
-  // })
+  image3.addEventListener('mouseover', function() {
+    span3.style.transition = "all 1s";
+    span3.textContent = 'B&B Expo Milano, Settimo Milanese, Italy';
+  })
 
+  image3.addEventListener('mouseout', function() {
+    span3.textContent = 'Hover Over or Click on Me';
+  })
 
-
-
-  // span1.addEventListener('mouseover', function() {
-  //   span1.style.height = '50%';
-  // })
-
-  // span1.addEventListener('mouseout', function() {
-  //   span1.style.height = '';
-  // })
-
-  // image1.addEventListener('click', function() {
-  //     image1.style.animation = 'resize 1s linear forwards';
-  //     image2.style.animation = 'resizeBack 1s linear forwards';
-  //     image3.style.animation = 'resizeBack 1s linear forwards';
-
-  //     // window.scrollTo(0, document.body.scrollHeight)
-  //     x.id = 'x-button-show';
-  // });
-
-  // image2.addEventListener('click', function() {
-  //     image2.style.animation = 'resize 1s linear forwards';
-  //     image1.style.animation = 'resizeBack 1s linear forwards';
-  //     image3.style.animation = 'resizeBack 1s linear forwards';
-  //     x.id = 'x-button-show';
-  // })
-
-  // image3.addEventListener('click', function() {
-  //     image3.style.animation = 'resize 1s linear forwards';
-  //     image1.style.animation = 'resizeBack 1s linear forwards';
-  //     image2.style.animation = 'resizeBack 1s linear forwards';
-  //     x.id = 'x-button-show';
-  // })
-
-  // x.addEventListener('click', function() {
-  //   image1.style.animation = 'resizeBack 1s linear forwards';
-  //   image2.style.animation = 'resizeBack 1s linear forwards';
-  //   image3.style.animation = 'resizeBack 1s linear forwards';
-  //   x.id = 'x-button';
-  // })
-  
-
-  // document.getElementById('highlight-hover').addEventListener('mouseout', function(event) {
-  //   event.target.id = 'highlight';
-  // })
 
 });

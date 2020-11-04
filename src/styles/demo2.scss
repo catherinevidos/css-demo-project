@@ -28,23 +28,6 @@
   animation: #{$str};
 }
 
-@include keyframes(background-color) {
-  0% {
-    background-color: red;
-  }
-
-  25% {
-    background-color: yellow;
-  }
-
-  50% {
-    background-color: blue;
-  }
-
-  100% {
-    background-color: green;
-  }
-}
 
 @include keyframes(type) {
 
@@ -77,19 +60,14 @@
 }
 
 .text-container {
-  width: 145px;
+  width: 150px;
 }
 
 #hello-world {
-  // @include animation('type 5s steps(18) 2s infinite normal both');
-  // 'blink 400ms steps(44) infinite')
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
   position: relative;
-  // &:hover {
-  //   animation-play-state: paused;
-  // }
 }
 
 #hello-world:after {
@@ -98,46 +76,6 @@
   right: 1px;
   @include animation('blink 800ms steps(15) infinite');
 }
-
-// #letter1 {
-//   @include animation('font-weight 2s forwards');
-//   animation-fill-mode: forwards;
-//   opacity: 0;
-//   margin: -2px;
-// }
-
-// #letter2 {
-//   @include animation('font-weight 2s infinite');
-//   opacity: 0;
-//   animation-fill-mode: forwards;
-//   animation-delay: 2s;
-//   margin: -2px;
-// }
-
-// #letter3 {
-//   @include animation('font-weight 2s infinite');
-//   opacity: 0;
-//   animation-fill-mode: forwards;
-//   animation-delay: 4s;
-//   margin: -2px;
-// }
-
-// #letter4 {
-//  @include animation('font-weight 2s infinite');
-//  opacity: 0;
-//  animation-fill-mode: forwards;
-//  animation-delay: 6s;
-//  margin: -2px;
-// }
-
-// #letter5 {
-//   @include animation('font-weight 2s infinite');
-//   opacity: 0;
-//   animation-fill-mode: forwards;
-//   animation-delay: 8s;
-//   margin: -2px;
-// }
-
 
 
 @include keyframes('highlight') {
@@ -217,7 +155,7 @@
   overflow: hidden;
   display: inline-block;
   transition: all ease .3s;
-  @include animation('stretch 4s ease-in-out 2s infinite normal both');
+  @include animation('stretch 3s ease-in-out 2s infinite normal both');
 }
 
 @include keyframes(bigger) {
@@ -239,7 +177,7 @@
    overflow: hidden;
    display: inline-block;
    transition: all ease .3s;
-   @include animation('bigger 4s ease-in-out 2s infinite normal both');
+   @include animation('bigger 3s ease-in-out 2s infinite normal both');
 }
 
 
