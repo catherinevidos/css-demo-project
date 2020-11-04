@@ -108,6 +108,18 @@
   }
 }
 
+.demo-text {
+  color: black;
+  font-size: 14pt;
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 20pt;
+}
 
 #highlight {
   width: 115px;
